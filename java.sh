@@ -1,5 +1,5 @@
 #!bin/bash
-java--version
+java --version
 echo "Teste version: ${version}"
 if [ $? > -eq 0 ]
 then
