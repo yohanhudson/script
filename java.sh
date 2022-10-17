@@ -7,7 +7,7 @@ echo "verificando a versao"
 if [ $version != 18 ]
 echo "Versao diferente da 18"
 sudo apt list --installed | grep open jdk
-sudo apt rm jdk{$version}
+sudo apt rm $?
 echo "iniciando a a instalaçaõ"
 sudo apt-get install openjdk-18-jdk
 fi
