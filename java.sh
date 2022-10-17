@@ -10,6 +10,8 @@ sudo apt list --installed | grep open jdk
 sudo apt rm $?
 echo "iniciando a a instalaçaõ"
 sudo apt-get install openjdk-18-jdk
+else
+echo "Versao do java instalada correta"
 fi
 else
 echo "java não instalado"
