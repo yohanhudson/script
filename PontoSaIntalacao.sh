@@ -26,9 +26,12 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo docker pull mysql:5.7
 sudo docker run -d -p 3306:3306 --name PontoSa -e "MYSQL_DATABASE=PontoSa"-e"MYSQL_ROOT_PASSWORD=urubu100" mysql:5.7
+echo "Run Run Docker "
 sudo docker start PontoSa
+echo "Start docker"
 sudo docker exec -it PontoSa bash
-mysql -u root -p
+echo "Exec docker"
+root@PontoSa:/# mysql -u root -p
 urubu100
 
 create database PontoSa;
