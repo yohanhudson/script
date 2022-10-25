@@ -20,13 +20,15 @@ else
 	echo "Java não instalado, iniciando a instalação"
 	sudo apt-get install openjdk-18-jdk
 fi
+
 sudo docker --version
-if [ $? > -eq 0 ]
+if [ $? > -eq 0 ];
 then
+	sudo docker start PontoSa
 	echo "Exec docker"
 	sudo docker exec -it PontoSa bash
 	echo "Entrnado no banco"
-	root@PontoSa:/# mysql -u root -p
+	mysql -u root -p
 	urubu100
 else
 	sudo apt install docker.io
