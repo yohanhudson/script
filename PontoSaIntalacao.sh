@@ -22,9 +22,13 @@ else
 fi
 
 sudo apt install docker.io
+echo "Teste 1"
 sudo systemctl start docker
+echo "Teste 2"
 sudo systemctl enable docker
+echo "Teste 3"
 sudo docker pull mysql:5.7
+echo "Teste 4"
 sudo docker run -d -p 3306:3306 --name PontoSa -e "MYSQL_DATABASE=PontoSa"-e"MYSQL_ROOT_PASSWORD=urubu100" mysql:5.7
 echo "Run Run Docker "
 sudo docker start PontoSa
