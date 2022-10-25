@@ -21,12 +21,22 @@ else
 	sudo apt-get install openjdk-18-jdk
 fi
 
-	sudo docker start PontoSa
-	echo "Exec docker"
-	sudo docker exec -it PontoSa bash
-	echo "Entrnado no banco"
-	mysql -u root -p
-	urubu100
+sudo apt update && sudo apt upgrade -y
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo systemctl status docker
+sudo docker pull mysql:5.7
+sudo su
+sudo docker run -d -p 3306:3306 --name PontoSa -e "MYSQLDATABASE=PontoSa" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql:5.7
+docker exec -it PontoSa bash
+mysql -u root -p
+urubu100
+
+
+
+
+
 
 create database PontoSa;
 use PontoSa;
