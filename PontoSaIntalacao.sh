@@ -25,8 +25,6 @@ if [ $? > -eq 0 ]
 then
 	sudo docker start PontoSa
 	echo "Start docker"
-	sudo docker exec -it PontoSa bash
-	echo "Exec docker"
 	echo "Entrnado no banco"
 	root@PontoSa:/# mysql -u root -p
 	urubu100
