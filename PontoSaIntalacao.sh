@@ -23,8 +23,8 @@ fi
 sudo docker --version
 if [ $? > -eq 0 ]
 then
-	sudo docker start PontoSa
-	echo "Start docker"
+	echo "Exec docker"
+	sudo docker exec -it PontoSa bash
 	echo "Entrnado no banco"
 	root@PontoSa:/# mysql -u root -p
 	urubu100
